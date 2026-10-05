@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập phối màu đơn tông (Monochromatic Palette)</title>
+    <style>
+        /* Biến màu sắc theo các bậc đơn sắc (Monochromatic) từ màu gốc logo #00ADEE */
+        :root {
+            --color-lvl-1: #00ADEE; /* Màu chủ đạo bậc 1 (Logo / Accent chính) */
+            --color-lvl-2: #00B2EF; /* Bậc 2: Điểm nổi bật */
+            --color-lvl-4: #00BFF2; /* Bậc 4: Màu nền header / banner chính */
+            --color-lvl-7: #8DD7F7; /* Bậc 7: Màu nền phần nội dung */
+            --color-lvl-9: #C6E9FA; /* Bậc 9: Màu nền footer nhẹ nhàng */
+            --text-dark: #1e293b;   /* Màu chữ đen chủ đạo */
+            --text-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Giữ nguyên màu chữ cho toàn bộ trang là màu đen */
+            color: var(--text-dark);
+            background-color: #f0f4f8;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--color-lvl-1);
+            color: var(--text-white);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--text-white);
+        }
+
+        nav a {
+            color: var(--text-white);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.85;
+        }
+
+        /* Bước 2: Thay đổi màu nền - Màu nền chuyển thành màu bậc 4 (#00BFF2) */
+        .hero-banner {
+            background-color: var(--color-lvl-4);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text-dark);
+        }
+
+        .hero-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-banner p {
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 0 auto 1.8rem auto;
+        }
+
+        /* Bước 3: Thay đổi màu nền phần ON SALE/PREVIEW */
+        /* Chuyển màu nền đỏ theo tông màu bậc 1 (#00ADEE) hoặc bậc 2 (#00B2EF) để tạo điểm nổi bật */
+        .badge-sale, .btn-preview {
+            background-color: var(--color-lvl-2);
+            color: var(--text-white);
+            padding: 0.5rem 1.4rem;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(0, 178, 239, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Container & Layout */
+        .container {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Bước 4: Đổi màu nền phần nội dung */
+        /* Màu nền hồng chuyển thành màu bậc 7 (#8DD7F7), giữ màu chữ đen vì nền bậc 7 khá nhạt */
+        .content-section {
+            background-color: var(--color-lvl-7);
+            color: var(--text-dark);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2.5rem;
+        }
+
+        .content-section h2 {
+            margin-bottom: 1.2rem;
+            color: #004b69;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .product-card p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #00567a;
+        }
+
+        /* Bảng giải thích màu sắc theo bài học */
+        .palette-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .palette-table th, .palette-table td {
+            padding: 0.8rem 1rem;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+
+        .palette-table th {
+            background-color: #f8fafc;
+        }
+
+        .color-dot {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-right: 8px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Bước 5: Đổi màu nền phần footer */
+        /* Màu nền thành màu bậc 9 (#C6E9FA) vẫn tạo độ sáng cho trang */
+        footer {
+            background-color: var(--color-lvl-9);
+            color: var(--text-dark);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-top: 1px solid rgba(0, 173, 238, 0.2);
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin: 0.4rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header với Logo bậc 1 (#00ADEE) -->
+    <header>
+        <div class="logo">BrandName</div>
+        <nav>
+            <a href="#">Trang chủ</a>
+            <a href="#">Sản phẩm</a>
+            <a href="#">Khuyến mãi</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- Bước 2: Hero Banner màu bậc 4 (#00BFF2) -->
+    <section class="hero-banner">
+        <span class="badge-sale">ON SALE / PREVIEW</span>
+        <h1 style="margin-top: 1rem;">Phối Màu Đơn Tông (Monochromatic)</h1>
+        <p>Giao diện được tinh chỉnh với các cấp độ màu sắc chuyển dần từ gam màu xanh chủ đạo <strong>#00ADEE</strong>.</p>
+        <button class="btn-preview">Khám phá ngay</button>
+    </section>
+
+    <div class="container">
+        <!-- Bước 4: Phần nội dung với nền bậc 7 (#8DD7F7) và chữ màu đen -->
+        <section class="content-section">
+            <h2>Bộ Sưu Tập Nổi Bật</h2>
+            <p>Màu nền của khu vực này đã được chuyển sang màu bậc 7 (<code>#8DD7F7</code>) tạo cảm giác êm dịu, tương phản rõ nét với văn bản màu đen.</p>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div>
+                        <h3>Sản phẩm cao cấp A</h3>
+                        <p>Mô tả chi tiết tính năng của sản phẩm với thiết kế thanh lịch và hiện đại.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">499.000 đ</span>
+                        <span class="badge-sale" style="padding: 0.3rem 0.8rem; font-size: 0.8rem;">Preview</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <h3>Sản phẩm cao cấp B</h3>
+                        <p>Dòng sản phẩm chuyên biệt tối ưu trải nghiệm người dùng với độ bền vượt trội.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">750.000 đ</span>
+                        <span class="badge-sale" style="padding: 0.3rem 0.8rem; font-size: 0.8rem;">On Sale</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div>
+                        <h3>Sản phẩm cao cấp C</h3>
+                        <p>Phiên bản giới hạn kết hợp công nghệ hiện đại và phong cách tối giản.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">990.000 đ</span>
+                        <span class="badge-sale" style="padding: 0.3rem 0.8rem; font-size: 0.8rem;">New</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bảng đối chiếu mã màu -->
+            <h3 style="margin-top: 2rem; margin-bottom: 0.5rem; color: #004b69;">Bảng thông số phối màu thực hành:</h3>
+            <table class="palette-table">
+                <thead>
+                    <tr>
+                        <th>Cấp bậc</th>
+                        <th>Mã màu HEX</th>
+                        <th>Vị trí áp dụng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bậc 1</strong></td>
+                        <td><span class="color-dot" style="background-color: #00ADEE;"></span><code>#00ADEE</code></td>
+                        <td>Màu chính logo, Header, Accent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bậc 2</strong></td>
+                        <td><span class="color-dot" style="background-color: #00B2EF;"></span><code>#00B2EF</code></td>
+                        <td>Nền nút ON SALE / PREVIEW (Bước 3)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bậc 4</strong></td>
+                        <td><span class="color-dot" style="background-color: #00BFF2;"></span><code>#00BFF2</code></td>
+                        <td>Nền Banner / Hero section (Bước 2)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bậc 7</strong></td>
+                        <td><span class="color-dot" style="background-color: #8DD7F7;"></span><code>#8DD7F7</code></td>
+                        <td>Nền khu vực nội dung (Bước 4)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bậc 9</strong></td>
+                        <td><span class="color-dot" style="background-color: #C6E9FA;"></span><code>#C6E9FA</code></td>
+                        <td>Nền Footer tạo độ sáng cho trang (Bước 5)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Bước 5: Footer màu bậc 9 (#C6E9FA) -->
+    <footer>
+        <p><strong>Thực hành thiết kế Web - Phối màu đơn tông (Monochromatic)</strong></p>
+        <p>&copy; 2026 CodeGym Practice. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+</body>
+</html>
