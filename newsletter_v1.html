@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Mẫu - Phiên bản 1 (Fresh Modern)</title>
+    <!-- Liên kết Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Bộ màu Phiên bản 1: Tươi mới, năng động (Analogous & Accent) */
+        :root {
+            --primary-color: #4CAF50;         /* Xanh lá cây tươi mới */
+            --darker-primary-color: #388E3C;  /* Trạng thái Hover của nút */
+            --secondary-color: #FF9800;       /* Cam ấm làm điểm nhấn tính năng */
+            --accent-color: #0288D1;          /* Xanh dương tương phản bổ sung */
+            --text-color: #263238;            /* Màu chữ chính */
+            --light-bg: #F1F8E9;              /* Màu nền nhẹ */
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .primary-bg { background-color: var(--primary-color) !important; }
+        .secondary-bg { background-color: var(--secondary-color) !important; }
+        .accent-bg { background-color: var(--accent-color) !important; }
+
+        .text-primary-color { color: var(--primary-color) !important; }
+        .text-secondary-color { color: var(--secondary-color) !important; }
+        .text-accent-color { color: var(--accent-color) !important; }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+            font-weight: 600;
+            padding: 0.6rem 1.6rem;
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--darker-primary-color);
+            border-color: var(--darker-primary-color);
+            color: white;
+        }
+
+        .newsletter-wrapper {
+            max-width: 760px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body class="py-5">
+    <div class="container">
+        <div class="newsletter-wrapper">
+            <!-- Header -->
+            <header class="text-center p-4 primary-bg text-white">
+                <h1 class="fw-bold mb-1">Trello Newsletter</h1>
+                <p class="mb-0 fs-6 opacity-75">Nơi bắt đầu những câu chuyện mới & Cải tiến làm việc nhóm</p>
+            </header>
+
+            <div class="p-4 p-md-5">
+                <!-- Section Intro -->
+                <section class="card border-0 bg-light mb-4 shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="card-title text-primary-color fw-bold h4">Chào mừng bạn đến với Bản tin Năng suất!</h2>
+                        <p class="card-text text-secondary mt-2">
+                            Khám phá cách sắp xếp công việc hiệu quả và tối ưu hóa quy trình làm việc hàng ngày cùng bảng Trello thông minh. Bắt đầu ngay hôm nay để đón đầu xu hướng tự động hóa.
+                        </p>
+                        <a href="#" class="btn-primary-custom mt-2">Tìm hiểu thêm</a>
+                    </div>
+                </section>
+
+                <!-- Section Features -->
+                <section class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 secondary-bg text-white border-0 shadow-sm">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="card-title h5 fw-bold">Tự động hóa Butler</h3>
+                                    <p class="card-text opacity-90 small mt-2">Thiết lập các quy tắc thông minh, nút lệnh tự động giúp bạn tiết kiệm hàng giờ thao tác lặp lại.</p>
+                                </div>
+                                <span class="badge bg-light text-dark align-self-start mt-3">Khuyên dùng</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 accent-bg text-white border-0 shadow-sm">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="card-title h5 fw-bold">Power-Ups Đa Nền Tảng</h3>
+                                    <p class="card-text opacity-90 small mt-2">Tích hợp mượt mà Google Drive, Slack, GitHub trực tiếp vào thẻ công việc của bạn.</p>
+                                </div>
+                                <span class="badge bg-light text-dark align-self-start mt-3">Mới cập nhật</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="text-center p-3 secondary-bg text-white">
+                <p class="mb-0 small fw-semibold">&copy; 2026 Trello / Atlassian. Mọi quyền được bảo lưu.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Mẫu - Phiên bản 2 (Tech Professional)</title>
+    <!-- Liên kết Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Bộ màu Phiên bản 2: Chuẩn công nghệ, chuyên nghiệp (Trello Blue / Indigo / Coral Accent) */
+        :root {
+            --primary-color: #0065FF;         /* Xanh đặc trưng của Trello / Atlassian */
+            --darker-primary-color: #0747A6;  /* Xanh đậm navy khi hover */
+            --secondary-color: #253858;       /* Xanh than / Indigo trầm tính, tin cậy */
+            --accent-color: #FF5630;          /* Coral đỏ cam nhấn mạnh tương phản cao */
+            --text-color: #172B4D;            /* Màu chữ đậm sắc nét */
+            --light-bg: #EBECF0;              /* Màu nền chuẩn Trello UI */
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .primary-bg { background-color: var(--primary-color) !important; }
+        .secondary-bg { background-color: var(--secondary-color) !important; }
+        .accent-bg { background-color: var(--accent-color) !important; }
+
+        .text-primary-color { color: var(--primary-color) !important; }
+        .text-secondary-color { color: var(--secondary-color) !important; }
+        .text-accent-color { color: var(--accent-color) !important; }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+            font-weight: 600;
+            padding: 0.6rem 1.6rem;
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--darker-primary-color);
+            border-color: var(--darker-primary-color);
+            color: white;
+        }
+
+        .newsletter-wrapper {
+            max-width: 760px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="py-5">
+    <div class="container">
+        <div class="newsletter-wrapper">
+            <!-- Header -->
+            <header class="text-center p-4 primary-bg text-white">
+                <h1 class="fw-bold mb-1">Trello Newsletter</h1>
+                <p class="mb-0 fs-6 opacity-75">Nơi bắt đầu những câu chuyện mới & Nâng tầm hiệu suất công việc</p>
+            </header>
+
+            <div class="p-4 p-md-5">
+                <!-- Section Intro -->
+                <section class="card border-0 bg-light mb-4 shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="card-title text-primary-color fw-bold h4">Chào mừng bạn đến với Không gian Trello Enterprise!</h2>
+                        <p class="card-text text-secondary mt-2">
+                            Quản lý dự án quy mô lớn với các tiêu chuẩn bảo mật doanh nghiệp, phân quyền linh hoạt và thống kê báo cáo theo thời gian thực.
+                        </p>
+                        <a href="#" class="btn-primary-custom mt-2">Tìm hiểu thêm</a>
+                    </div>
+                </section>
+
+                <!-- Section Features -->
+                <section class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 secondary-bg text-white border-0 shadow-sm">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="card-title h5 fw-bold">Chế độ xem Timeline & Table</h3>
+                                    <p class="card-text opacity-90 small mt-2">Theo dõi tiến độ toàn diện qua biểu đồ Gantt và bảng biểu trực quan theo quý.</p>
+                                </div>
+                                <span class="badge bg-light text-dark align-self-start mt-3">Enterprise</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 accent-bg text-white border-0 shadow-sm">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="card-title h5 fw-bold">Thông báo khẩn cấp & Deadline</h3>
+                                    <p class="card-text opacity-90 small mt-2">Hệ thống cảnh báo tự động khi các đầu việc sắp hết hạn hoặc bị chậm tiến độ.</p>
+                                </div>
+                                <span class="badge bg-light text-dark align-self-start mt-3">Ưu tiên cao</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="text-center p-3 secondary-bg text-white">
+                <p class="mb-0 small fw-semibold">&copy; 2026 Trello / Atlassian. Mọi quyền được bảo lưu.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
